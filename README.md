@@ -10,5 +10,6 @@ The main feature of this website are:
 <li>✅ responsive packages section using grid.</li>
 <li>✅ responsive booking form section with php and mysql.</li>
 <li>✅ responsive footer section using grid.</li>
+<p>
 
-The website is hosted at : http://travel-tour-adventure.infinityfreeapp.com/
+The website is hosted at : http://travel-tour-adventure.infinityfreeapp.com/</p>
