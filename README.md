@@ -2,12 +2,13 @@
 The Responsive tour and travel website design using html, css, vanilla javascript, php and mysql database from scratch.
 
 The main feature of this website are:
-✅ responsive header with toggle menu effect using vanilla javascript.
-✅ responsive home section with touch slider using swiper.js
-✅ responsive about section using flexbox.
-✅ responsive reviews section  with touch slider using swiper.js
-✅ responsive packages section using grid.
-✅ responsive booking form section with php and mysql.
-✅ responsive footer section using grid.
+<ul><li>
+✅ responsive header with toggle menu effect using vanilla javascript.</li>
+<li>✅ responsive home section with touch slider using swiper.js</li>
+✅ responsive about section using flexbox.</li>
+<li>✅ responsive reviews section  with touch slider using swiper.js</li>
+<li>✅ responsive packages section using grid.</li>
+<li>✅ responsive booking form section with php and mysql.</li>
+<li>✅ responsive footer section using grid.</li>
 
 The website is hosted at : http://travel-tour-adventure.infinityfreeapp.com/
