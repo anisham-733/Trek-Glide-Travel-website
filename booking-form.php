@@ -34,8 +34,8 @@ if(isset($_POST['submit'])){
     values('$name', '$email', '$cno', '$address', '$location', $guests, '$checkin', '$checkout')";
     
      echo $conn;
-     echo mysqli_query($connection,$sql);
-    if (mysqli_query($connection,$sql)){
+//      echo mysqli_query($connection,$sql);
+    if (mysqli_query($conn,$sql)){
         echo "hello"
 //         echo  "<script> alert("Booking done successfully");</script>
        
@@ -43,7 +43,7 @@ if(isset($_POST['submit'])){
     
 
     else {
-        echo 'Try again' .mysqli_error($connection);
+        echo 'Try again' .mysqli_error($conn);
 
     }
 }
