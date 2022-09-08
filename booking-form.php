@@ -32,6 +32,9 @@ echo "hello";
 if(isset($_POST['submit'])){
     echo "hello";
 }
+else{
+    echo "bro";
+}
     
 //     echo "<script>
 //             alert('Booking done successfully');
