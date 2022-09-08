@@ -87,7 +87,7 @@
         <h1 class="heading-title">
             Book your Trip !!
         </h1>
-        <form action="booking-form.php" method="post" name = "form" class="book-form" onsubmit = "return validateForm()">
+        <form action="booking-form.php" method="post" name = "form" class="book-form" onsubmit = "">
             <div class="flex">
                 <div class="inputBox" name = "name">
                     <span>Name : </span>
