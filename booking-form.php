@@ -32,12 +32,13 @@ if(isset($_POST['submit'])){
 
     $sql= "insert into book_form1 (name, email, phone, address, location, guests, arrival, departure)
     values('$name', '$email', '$cno', '$address', '$location', $guests, '$checkin', '$checkout')";
-
+    
+     echo $conn;
+     echo mysqli_query($connection,$sql);
     if (mysqli_query($connection,$sql)){
         echo "hello"
 //         echo  "<script> alert("Booking done successfully");</script>
-//         echo $conn;
-//         echo mysqli_query($connection,$sql);
+       
     }
     
 
