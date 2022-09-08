@@ -29,10 +29,12 @@ if(isset($_POST['submit'])){
     $checkout = $_POST['checkout'];
 
     $sql= "insert into book_form1 (name, email, phone, address, location, guests, arrival, departure)
-    values('$name', '$email', '$cno', '$address', '$location', '$guests', '$checkin', '$checkout')";
+    values('$name', '$email', '$cno', '$address', '$location', $guests, '$checkin', '$checkout')";
 
     if (mysqli_query($connection,$sql)){
         echo "Booking done successfully";
+        echo $conn;
+        echo mysqli_query($connection,$sql);
     }
     
 
