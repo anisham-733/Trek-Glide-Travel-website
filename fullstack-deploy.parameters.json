@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "webAppName": {
+            "value": "WebApp-Fullstack-deploy1" // TODO: Fill in parameter value
+        },
+        "serverfarms_AppServicePlan1_externalid": {
+            "value": "/subscriptions/505a5412-fa6f-4308-8549-50b0f4c49e30/resourceGroups/RG-Anisha/providers/Microsoft.Web/serverfarms/AppServicePlan1" // TODO: Fill in parameter value
+        }
+       
+    }
+}
+
+

@@ -1,0 +1,86 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+
+
+        "webAppName": {
+            "type": "string",
+            "metadata": {
+                "description": "web app name"
+            }
+        },
+        "serverfarms_AppServicePlan1_externalid": {
+            "type": "string",
+            "metadata": {
+                "description": "app service plan"
+            }
+        }
+    },
+    "functions": [],
+    "variables": { "appServicePlanPortalName": "[format('AppServicePlan-{0}', parameters('webAppName'))]" },
+    "resources": [
+        {
+            "name": "[variables('appServicePlanPortalName')]",
+            "type": "Microsoft.Web/serverfarms",
+            "apiVersion": "2020-12-01",
+            "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "F1",
+                "capacity": 1
+            },
+            "tags": {
+
+            },
+            "properties": {
+
+            }
+        },
+
+
+        {
+            "name": "[parameters('webAppName')]",
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2020-12-01",
+            "location": "[resourceGroup().location]",
+            "kind": "app,linux",
+            "tags": {
+                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/appServicePlan1')]": "Resource",
+                "displayName": "webApp1"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]"
+            ],
+            "properties": {
+
+                "enabled": true,
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]"
+
+                // "serverFarmId": "[parameters('serverfarms_AppServicePlan1_externalid')]"
+
+            }
+
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2022-03-01",
+            "name": "[concat(parameters('webAppName'), '/119b8953-e3eb-4896-a5ef-9c014449a7af')]",
+            "location": "Central India",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('webAppName'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author_email": "N/A",
+                "author": "N/A",
+                "deployer": "GITHUB_ZIP_DEPLOY",
+                "message": "{\"type\":\"deployment\",\"sha\":\"3975bdee86057e0a6bf11c775d587a0a95843bf9\",\"repoName\":\"anisham-733/Trek-Glide-Travel-website\",\"slotName\":\"Production\",\"commitMessage\":\"Update booking-form.php\"}",
+                "start_time": "2022-09-08T13:46:30.6638307Z",
+                "end_time": "2022-09-08T13:46:33.387802Z",
+                "active": false
+            }
+        }
+
+    ],
+    "outputs": {}
+}
