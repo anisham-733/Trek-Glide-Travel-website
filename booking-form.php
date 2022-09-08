@@ -17,7 +17,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 // $connectionInfo = array("UID" => "booking-admin", "pwd" => "Anisham733@123", "Database" => "travel-booking-db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 // $serverName = "tcp:travel-booking-server.database.windows.net,1433";
 // $conn = sqlsrv_connect($serverName, $connectionInfo);
-echo "hello";
+
 // PHP Data Objects(PDO) Sample Code:
 // try {
 //     $connection = new PDO("sqlsrv:server = tcp:travel-booking-server.database.windows.net,1433; Database = travel-booking-db", "booking-admin", "Anisham733@123");
@@ -41,6 +41,7 @@ if(isset($_POST['submit'])){
     $checkout = $_POST['checkout'];
      $sql= "insert into book_form1 (name, email, phone, address, location, guests, arrival, departure)
     values('$name', '$email', '$cno', '$address', '$location','$guests', '$checkin', '$checkout')";
+    echo "after";
     mysqli_query($conn,$sql);
     echo "hello";
 }
