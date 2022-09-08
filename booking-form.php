@@ -16,6 +16,7 @@ $serverName = "tcp:travel-booking-server.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 if(isset($_POST['submit'])){
+    echo "hello";
 //     echo "<script>
 //             alert('Booking done successfully');
 //             alert(
@@ -29,20 +30,20 @@ if(isset($_POST['submit'])){
     $checkin = $_POST['checkin'];
     $checkout = $_POST['checkout'];
 
-    $sql= "insert into book_form1 (name, email, phone, address, location, guests, arrival, departure)
-    values('$name', '$email', '$cno', '$address', '$location', $guests, '$checkin', '$checkout')";
+//     $sql= "insert into book_form1 (name, email, phone, address, location, guests, arrival, departure)
+//     values('$name', '$email', '$cno', '$address', '$location', $guests, '$checkin', '$checkout')";
 
-    if (mysqli_query($connection,$sql)){
-        echo  "<script> alert("Booking done successfully");</script>
-        echo $conn;
-        echo mysqli_query($connection,$sql);
-    }
+//     if (mysqli_query($connection,$sql)){
+//         echo  "<script> alert("Booking done successfully");</script>
+//         echo $conn;
+//         echo mysqli_query($connection,$sql);
+//     }
     
 
-    else {
-        echo 'Try again' .mysqli_error($connection);
+//     else {
+//         echo 'Try again' .mysqli_error($connection);
 
-    }
+//     }
 }
 
 ?>
