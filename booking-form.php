@@ -16,9 +16,10 @@ $serverName = "tcp:travel-booking-server.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 if(isset($_POST['submit'])){
-    echo "<script>
-            alert('Booking done successfully');
-            </script>";
+//     echo "<script>
+//             alert('Booking done successfully');
+//             alert(
+//             </script>";
     $name = $_POST['name'];
     $email = $_POST['email'];
     $cno = $_POST['number'];
@@ -32,7 +33,7 @@ if(isset($_POST['submit'])){
     values('$name', '$email', '$cno', '$address', '$location', $guests, '$checkin', '$checkout')";
 
     if (mysqli_query($connection,$sql)){
-        echo "Booking done successfully";
+        echo  "<script> alert("Booking done successfully");</script>
         echo $conn;
         echo mysqli_query($connection,$sql);
     }
