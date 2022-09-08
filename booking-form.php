@@ -29,9 +29,9 @@ echo "hello";
 // }
 
 
-// if(isset($_POST['submit'])){
-//     echo "hello";
-// }
+if(isset($_POST['submit'])){
+    echo "hello";
+}
     
 //     echo "<script>
 //             alert('Booking done successfully');
