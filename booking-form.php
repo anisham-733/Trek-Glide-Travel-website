@@ -31,6 +31,16 @@ echo "hello";
 
 if(isset($_POST['submit'])){
     echo "hello";
+       $name = $_POST['name'];
+    $email = $_POST['email'];
+    $cno = $_POST['number'];
+    $address = $_POST['address'];
+    $location = $_POST['location'];
+    $guests = $_POST['guests'];
+    $checkin = $_POST['checkin'];
+    $checkout = $_POST['checkout'];
+     $sql= "insert into book_form1 (name, email, phone, address, location, guests, arrival, departure)
+    values('$name', '$email', '$cno', '$address', '$location','$guests', '$checkin', '$checkout')";
 }
 else{
     echo "bro";
@@ -40,17 +50,9 @@ else{
 //             alert('Booking done successfully');
 //             alert(
 //             </script>";
-//     $name = $_POST['name'];
-//     $email = $_POST['email'];
-//     $cno = $_POST['number'];
-//     $address = $_POST['address'];
-//     $location = $_POST['location'];
-//     $guests = $_POST['guests'];
-//     $checkin = $_POST['checkin'];
-//     $checkout = $_POST['checkout'];
+ 
 
-//     $sql= "insert into book_form1 (name, email, phone, address, location, guests, arrival, departure)
-//     values('$name', '$email', '$cno', '$address', '$location','$guests', '$checkin', '$checkout')";
+   
     
 // //      echo $conn;
 // //      echo mysqli_query($connection,$sql);
