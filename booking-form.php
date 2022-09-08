@@ -42,7 +42,7 @@ if(isset($_POST['submit'])){
      $sql= "insert into book_form1 (name, email, phone, address, location, guests, arrival, departure)
     values('$name', '$email', '$cno', '$address', '$location','$guests', '$checkin', '$checkout')";
     echo "after";
-    sqlsrv_query($conn,$sql);
+    sqlsrv_query( $conn, $sql);
     echo "hello";
 }
 else{
