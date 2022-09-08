@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     $checkin = $_POST['checkin'];
     $checkout = $_POST['checkout'];
 
-    $sql= "insert into book_form (name, email, phone, address, location, guests, arrival, departure)
+    $sql= "insert into book_form1 (name, email, phone, address, location, guests, arrival, departure)
     values('$name', '$email', '$cno', '$address', '$location', '$guests', '$checkin', '$checkout')";
 
     if (mysqli_query($connection,$sql)){
