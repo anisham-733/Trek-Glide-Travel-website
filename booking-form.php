@@ -1,23 +1,23 @@
 <?php
-
+echo "hello";
 // PHP Data Objects(PDO) Sample Code:
-try {
-    $connection = new PDO("sqlsrv:server = tcp:travel-booking-server.database.windows.net,1433; Database = travel-booking-db", "booking-admin", "Anisham733@123");
-    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
+// try {
+//     $connection = new PDO("sqlsrv:server = tcp:travel-booking-server.database.windows.net,1433; Database = travel-booking-db", "booking-admin", "Anisham733@123");
+//     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// }
+// catch (PDOException $e) {
+//     print("Error connecting to SQL Server.");
+//     die(print_r($e));
+// }
 
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "booking-admin", "pwd" => "Anisham733@123", "Database" => "travel-booking-db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:travel-booking-server.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
+// // SQL Server Extension Sample Code:
+// $connectionInfo = array("UID" => "booking-admin", "pwd" => "Anisham733@123", "Database" => "travel-booking-db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+// $serverName = "tcp:travel-booking-server.database.windows.net,1433";
+// $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-if(isset($_POST['submit'])){
-    echo "hello";
-}
+// if(isset($_POST['submit'])){
+//     echo "hello";
+// }
     
 //     echo "<script>
 //             alert('Booking done successfully');
